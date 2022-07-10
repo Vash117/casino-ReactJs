@@ -1,0 +1,387 @@
+:root {
+  --animation-delay: 0.5s;
+}
+
+body {
+  background-color: black;
+}
+nav {
+  width: 100%;
+  min-height: 20vh;
+  background-color: grey;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  position: relative;
+  z-index: 3;
+  opacity: 0.5;
+}
+nav p {
+  color: whitesmoke;
+}
+a {
+  transition: color 0.3s ease;
+}
+.user-nav {
+  align-items: center;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+.user-nav a {
+  margin: 0 0 0 25px;
+}
+nav a {
+  text-decoration: none;
+  color: darkkhaki;
+  z-index: 1;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+nav a:hover {
+  color: aliceblue;
+}
+
+.games-shower {
+  width: 100%;
+  min-height: 80vh;
+  max-height: 100vh;
+  background-color: black;
+}
+
+/* misteri nav */
+
+.mistery-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  min-height: 20vh;
+  background-color: black;
+  opacity: 1;
+  z-index: 2;
+}
+.mistery-single {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.games-shower {
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2em;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+.aboutPage {
+  color: white;
+}
+.aboutPage ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.aboutPage h2 {
+  margin-top: 0.75em;
+}
+.aboutPage li {
+  position: relative;
+  display: block;
+  width: auto;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+  margin-top: 0.3em;
+}
+.dev {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+li:hover {
+  color: wheat;
+}
+.game-container {
+  /* background-color: aliceblue; */
+  width: 20%;
+  margin-top: 2rem;
+  min-height: 20vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: wheat;
+  contain: content;
+}
+.game-container a {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+}
+.game-container a:hover {
+  color: darkkhaki;
+}
+.game-container p {
+  font-size: 1.1rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+.screen-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.screen-container h1 {
+  /* font-size: 200px; */
+  color: white;
+  position: relative;
+  z-index: 50;
+  font-size: 3em;
+}
+.slot-screen {
+  width: 70%;
+  height: 74vh;
+  background-color: goldenrod;
+  margin: auto;
+  display: flex;
+  position: relative;
+}
+.reel {
+  width: 25%;
+  height: 100%;
+  border: 5px solid;
+
+  contain: content;
+}
+.symbol {
+  height: 33%;
+  contain: content;
+}
+.home {
+  width: 100%;
+  height: 80vh;
+  background-image: url("./modules//slots/images/slot\ covers/logo.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.controls {
+  z-index: 3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1em;
+  width: 70%;
+  position: absolute;
+  color: white;
+  bottom: 0;
+  margin: 0 auto;
+  left: 15%;
+  transform: translateY(100%);
+}
+
+.spins {
+  animation-duration: 0.3s;
+  animation-iteration-count: 0;
+  transition: transform 0.3s ease;
+}
+.top {
+  animation-name: reelOneSpin;
+}
+.middle {
+  animation-name: reelTwoSpin;
+}
+.bottom {
+  animation-name: reel3Spin;
+}
+.filler {
+  animation-name: fillerSpin;
+}
+.hidden {
+  width: 100%;
+  height: 200px;
+  background-color: black;
+  position: absolute;
+  z-index: 1;
+}
+.up {
+  transform: translateY(-100%);
+}
+.down {
+  bottom: 0;
+  transform: translateY(100%);
+}
+@keyframes reelOneSpin {
+  0% {
+    transform: translateY(100%);
+  }
+  25% {
+    transform: translateY(200%);
+  }
+  50% {
+    transform: translateY(300%);
+  }
+  75% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes reelTwoSpin {
+  0% {
+    transform: translateY(100%);
+  }
+  25% {
+    transform: translateY(200%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  75% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes reel3Spin {
+  0% {
+    transform: translateY(100%);
+  }
+  25% {
+    transform: translateY(-300%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  75% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fillerSpin {
+  0% {
+    transform: translateY(-400%);
+  }
+  25% {
+    transform: translateY(-300%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  75% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.curent-win {
+  position: absolute;
+  bottom: -100%;
+  font-size: 2rem;
+}
+.free-games-start {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 5rem;
+  z-index: 1;
+  color: white;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  height: 50vh;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgb(31, 31, 31);
+  text-transform: capitalize;
+  border: 2px solid darkkhaki;
+}
+form * {
+  margin-top: 1rem;
+  width: 75%;
+}
+
+input {
+  background-color: lightgrey;
+  margin-bottom: 0.7rem;
+  outline: none;
+  padding: 0.2rem;
+  transition: all 0.3s ease;
+}
+input:focus {
+  background-color: darkkhaki;
+  color: aliceblue;
+}
+
+form button {
+  margin-top: 2rem;
+  padding: 0.5rem;
+  width: 50%;
+  border-radius: 10000px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  position: relative;
+  cursor: pointer;
+  z-index: 0;
+}
+form button::before {
+  content: "";
+  position: absolute;
+  border-radius: 10000px;
+  background-color: darkkhaki;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  transform: scale(0);
+  transition: transform 0.1s ease;
+  transform-origin: center;
+}
+form button:hover::before {
+  transform: scale(1);
+}
+form button:hover {
+  color: aliceblue;
+  transition: color 0.1s ease;
+  transition-delay: 0.1s;
+}
+/* form button::after {
+  content: "";
+  position: absolute;
+  border-radius: 10000px;
+  background-color: darkkhaki;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  transform: scale(0);
+  transition: transform 0.2s ease;
+  transform-origin: right;
+}
+form button:hover::after {
+  transform: scale(1);
+  transform-origin: left;
+} */
